@@ -9,7 +9,7 @@ using System;
 namespace CoreRTA.Database
 {
 
-    public static class RtsDb
+    public static class RtaDb
     {
         public static string DatabaseName { get; private set; }
         public static string EndPoint { get; private set; }
@@ -19,7 +19,7 @@ namespace CoreRTA.Database
 
 
 
-        static RtsDb()
+        static RtaDb()
         {
             DatabaseName = "CoreRtsApp";
             EndPoint = "mongodb://localhost:27017/";
@@ -78,7 +78,7 @@ namespace CoreRTA.Database
 
         #region Unique Documents
 
-        public static async void UpdateUniqueDocument(string collection, string key, object obj)
+        public static async void UpdateDocument(string collection, string key, object obj)
         {
             var coll = database.GetCollection<Record>(collection);
             var filter = Builders<Record>.Filter.Eq("key", key);
@@ -93,7 +93,7 @@ namespace CoreRTA.Database
             await coll.UpdateOneAsync(filter, update, options);
         }
 
-        public static async void DeleteUniqueDocument(string collection, string key)
+        public static async void DeleteDocument(string collection, string key)
         {
             var coll = database.GetCollection<Record>(collection);
 
@@ -102,7 +102,7 @@ namespace CoreRTA.Database
             await coll.DeleteManyAsync(filter);
         }
 
-        public static T ReadUniqueDocument<T>(string collectionName, string key)
+        public static T ReadDocument<T>(string collectionName, string key)
         {
             AddClassToMap(typeof(T));
 

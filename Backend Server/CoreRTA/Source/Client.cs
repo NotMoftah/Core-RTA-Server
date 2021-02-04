@@ -17,8 +17,9 @@ namespace CoreRTA
         public ulong ServerID { get; private set; }
         public string DeviceID { get; private set; }
         public bool IsConnected { get; private set; }
-        public List<HubObject> Hubs { get; private set; }
         public DateTime LastUpdateTime { get; private set; }
+
+        private List<HubObject> Hubs { get; set; }
 
         public Client(string deviceId)
         {

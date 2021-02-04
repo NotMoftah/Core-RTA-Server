@@ -15,14 +15,15 @@ namespace ShedApp
             var app = new RealtimeApp(IPAddress.Any, 4455, TimeSpan.FromMinutes(2));
 
             // Init the database
-            RtsDb.Connect("rts-app");
+            RtaDb.Connect("rts-app");
 
             // Add the DB Collections
-            RtsDb.CreateCollection("clients");
+            RtaDb.CreateCollection("clients");
 
             // Add the Hubs
             app.AddHub<Hubs.AuthHub>();
             app.AddHub<Hubs.IndexHub>();
+            app.AddHub<Hubs.PlayerHub>();
 
             // Run the App
             app.Run();

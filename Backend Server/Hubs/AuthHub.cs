@@ -6,10 +6,8 @@ namespace ShedApp.Hubs
 {
     public class AuthHub : Hub
     {
-        public AuthHub()
-        {
+        public bool IsAuthnticated { get; private set; }
 
-        }
 
         #region Connection Events
 
@@ -27,16 +25,23 @@ namespace ShedApp.Hubs
         }
         public override void OnClientData(string data)
         {
-
+            System.Console.WriteLine(data);
         }
 
         #endregion
 
 
-        [Route("PlayerStatus")]
-        void Ping(string payload)
+        [Route("auth/login", typeof(Models.LoginRequest))]
+        void Login(Models.LoginRequest request)
         {
-            System.Console.WriteLine(payload);
+            var player = RtaDb.ReadDocument<Models.PlayerInfo>("clients", request.token);
+
+            if (player != null && player.password == request.password)
+            {
+                IsAuthnticated = true;
+
+                SendAsync("login", player);
+            }
         }
     }
 }

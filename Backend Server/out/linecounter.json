@@ -1,0 +1,120 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\Users\\pc\\Documents\\Github\\Core RTA Server\\Backend Server",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-02-03 17:58:06",
+            "filesum": 16,
+            "codesum": 1067,
+            "commentsum": 149,
+            "blanksum": 319,
+            "statistics": {
+                ".cs": {
+                    "code": 1067,
+                    "comment": 149,
+                    "blank": 319
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "CoreRTA\\Attributes\\Route.cs"
+                },
+                {
+                    "blank": 37,
+                    "code": 86,
+                    "comment": 0,
+                    "filename": "CoreRTA\\Database\\MongoDB.cs"
+                },
+                {
+                    "blank": 5,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "CoreRTA\\Database\\Record.cs"
+                },
+                {
+                    "blank": 27,
+                    "code": 85,
+                    "comment": 10,
+                    "filename": "CoreRTA\\RealtimeApp.cs"
+                },
+                {
+                    "blank": 22,
+                    "code": 97,
+                    "comment": 18,
+                    "filename": "CoreRTA\\Sockets\\Buffer.cs"
+                },
+                {
+                    "blank": 105,
+                    "code": 321,
+                    "comment": 89,
+                    "filename": "CoreRTA\\Sockets\\Session.cs"
+                },
+                {
+                    "blank": 13,
+                    "code": 63,
+                    "comment": 6,
+                    "filename": "CoreRTA\\Sockets\\TcpServer.cs"
+                },
+                {
+                    "blank": 43,
+                    "code": 147,
+                    "comment": 20,
+                    "filename": "CoreRTA\\Source\\Client.cs"
+                },
+                {
+                    "blank": 26,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "CoreRTA\\Source\\Hub.cs"
+                },
+                {
+                    "blank": 6,
+                    "code": 37,
+                    "comment": 1,
+                    "filename": "CoreRTA\\Source\\HubObject.cs"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "CoreRTA\\Source\\RouteInfo.cs"
+                },
+                {
+                    "blank": 13,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "Hubs\\AuthHub.cs"
+                },
+                {
+                    "blank": 8,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "Hubs\\IndexHub.cs"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "Models\\AuthHubModels.cs"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "Models\\PlayerHubModels.cs"
+                },
+                {
+                    "blank": 5,
+                    "code": 21,
+                    "comment": 5,
+                    "filename": "Program.cs"
+                }
+            ]
+        }
+    ]
+}
