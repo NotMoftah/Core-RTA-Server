@@ -65,6 +65,14 @@ namespace CoreRTA
             Client.SendAsync(route, data);
         }
 
+        public void SendAsync(string route)
+        {
+            if (Client == null)
+                return;
+
+            Client.SendAsync(route, string.Empty);
+        }
+
         #endregion
 
 

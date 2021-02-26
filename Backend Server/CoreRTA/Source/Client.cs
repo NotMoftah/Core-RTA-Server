@@ -136,6 +136,14 @@ namespace CoreRTA
             }
         }
 
+        public void SendAsync(string route)
+        {
+            if (session != null && session.IsConnected)
+            {
+                session.SendAsync(ParseRequest(route, string.Empty));
+            }
+        }
+
         private void OnSessionMessage(string message)
         {
             // Notifiy listners
