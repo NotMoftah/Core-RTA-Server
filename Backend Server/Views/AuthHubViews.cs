@@ -1,6 +1,6 @@
 using System;
 
-namespace ShedApp.Models
+namespace ShedApp.Views
 {
     public class PlayerInfo
     {

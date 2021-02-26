@@ -1,7 +1,7 @@
 using System;
 
 
-namespace ShedApp.Models
+namespace ShedApp.Views
 {
     [Serializable]
     public class Player

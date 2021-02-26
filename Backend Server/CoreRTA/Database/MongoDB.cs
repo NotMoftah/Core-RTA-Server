@@ -116,6 +116,21 @@ namespace CoreRTA.Database
             return default(T);
         }
 
+        public static bool ReadDocument<T>(string collectionName, string key, out T document)
+        {
+            AddClassToMap(typeof(T));
+            document = default(T);
+
+            var collection = database.GetCollection<Record>(collectionName);
+            var data = collection.Find(x => x.key == key).FirstOrDefault();
+
+            if (data == null)
+                return false;
+
+            document = BsonSerializer.Deserialize<T>(data.payload);
+            return true;
+        }
+
         #endregion
 
     }

@@ -31,10 +31,10 @@ namespace ShedApp.Hubs
         #endregion
 
 
-        [Route("auth/login", typeof(Models.LoginRequest))]
-        void Login(Models.LoginRequest request)
+        [Route("auth/login", typeof(Views.LoginRequest))]
+        void Login(Views.LoginRequest request)
         {
-            var player = RtaDb.ReadDocument<Models.PlayerInfo>("clients", request.token);
+            var player = RtaDb.ReadDocument<Views.PlayerInfo>("clients", request.token);
 
             if (player != null && player.password == request.password)
             {
